@@ -40,6 +40,7 @@ body{
 }
 
 .title{
+  font-style: italic;
   margin: 0;
   font-weight: 600;
   font-size: clamp(44px, 7vw, 76px);
