@@ -1,7 +1,8 @@
 :root{
-  --bg: #f3f0ea;
-  --ink: #2d3136;
-  --muted: rgba(45,49,54,0.68);
+  --bg: #f3f0ea;                 /* warm off-white */
+  --ink: #2d3136;                /* charcoal */
+  --muted: rgba(45,49,54,0.65);  /* for name + years */
+  --mid: rgba(45,49,54,0.84);    /* for section titles (between ink and muted) */
 
   --col-max: 680px;
   --gutter: clamp(20px, 5vw, 64px);
@@ -35,21 +36,21 @@ body{
 
 .name{
   font-weight: 400;
-  font-size: clamp(16px, 1.9vw, 19px); /* slightly less tiny */
+  font-size: clamp(16px, 1.9vw, 19px);
   letter-spacing: 0.01em;
   color: var(--muted);
-  margin-bottom: 16px; /* more air before title */
+  margin-bottom: 16px;
 }
 
-/* Title: softer, less brutal */
 .title{
   margin: 0;
-  font-weight: 500;                 /* down from 600 */
-  font-size: clamp(40px, 6.2vw, 66px); /* down from 76 max */
-  line-height: 1.08;                /* a touch more breathing */
-  letter-spacing: 0.002em;          /* less rigid */
+  font-weight: 500;                 /* softer than before */
+  font-size: clamp(40px, 6.2vw, 66px);
+  line-height: 1.08;
+  letter-spacing: 0.002em;
   text-transform: none;
-  font-style: normal;               /* IMPORTANT: removes italic */
+  font-style: normal;
+  color: var(--ink);
 }
 
 /* List */
@@ -62,7 +63,7 @@ body{
 .item{
   display: block;
   text-decoration: none;
-  color: var(--ink);
+  color: inherit;
   padding: 4px 0;
 }
 
@@ -70,6 +71,7 @@ body{
   font-weight: 600;
   font-size: clamp(22px, 2.6vw, 26px);
   line-height: 1.2;
+  color: var(--mid);               /* key change: not as black */
 }
 
 .item-meta{
@@ -79,6 +81,7 @@ body{
   margin-top: 4px;
 }
 
+/* Hover remains subtle */
 .item:hover .item-title{
   text-decoration: underline;
   text-underline-offset: 3px;
