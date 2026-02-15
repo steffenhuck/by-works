@@ -1,7 +1,7 @@
 :root{
   --bg: #f3f0ea;
   --ink: #2d3136;
-  --muted: rgba(45,49,54,0.65);
+  --muted: rgba(45,49,54,0.68);
 
   --col-max: 680px;
   --gutter: clamp(20px, 5vw, 64px);
@@ -23,31 +23,36 @@ body{
 .wrap{
   width: min(var(--col-max), calc(100% - (2 * var(--gutter))));
   margin: 0 auto;
-  padding: clamp(70px, 12vh, 140px) 0 clamp(50px, 10vh, 110px);
+  padding: clamp(78px, 12vh, 150px) 0 clamp(55px, 10vh, 120px);
 }
+
+/* Masthead */
 
 .masthead{
   text-align: center;
-  margin-bottom: clamp(36px, 6vh, 60px);
+  margin-bottom: clamp(34px, 6vh, 56px);
 }
 
 .name{
   font-weight: 400;
-  font-size: clamp(15px, 1.7vw, 18px);
+  font-size: clamp(16px, 1.9vw, 19px); /* slightly less tiny */
   letter-spacing: 0.01em;
   color: var(--muted);
-  margin-bottom: 12px;
+  margin-bottom: 16px; /* more air before title */
 }
 
+/* Title: softer, less brutal */
 .title{
-  font-style: italic;
   margin: 0;
-  font-weight: 600;
-  font-size: clamp(44px, 7vw, 76px);
-  line-height: 1.05;
-  letter-spacing: 0.005em;
+  font-weight: 500;                 /* down from 600 */
+  font-size: clamp(40px, 6.2vw, 66px); /* down from 76 max */
+  line-height: 1.08;                /* a touch more breathing */
+  letter-spacing: 0.002em;          /* less rigid */
   text-transform: none;
+  font-style: normal;               /* IMPORTANT: removes italic */
 }
+
+/* List */
 
 .list{
   display: grid;
