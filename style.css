@@ -26,15 +26,10 @@ body{
 .wrap{
   width: min(var(--col-max), calc(100% - (2 * var(--gutter))));
   margin: 0 auto;
+
+  /* reduced top padding (your “one quarter less” attempt), but clean */
   padding:
     clamp(90px, 12vh, 150px)
-    0
-    clamp(90px, 14vh, 150px);
-}
-
-  /* generous but natural */
-  padding:
-    clamp(120px, 16vh, 200px)
     0
     clamp(90px, 14vh, 150px);
 }
@@ -47,14 +42,11 @@ body{
 }
 
 .name{
-  display: inline-block; /* CRUCIAL: enables vertical margin */
-
+  display: inline-block; /* enables vertical margin */
   font-weight: 400;
   font-size: clamp(16px, 1.9vw, 19px);
   letter-spacing: 0.01em;
   color: var(--muted);
-
-  /* now this will actually work */
   margin-bottom: 25px;
 }
 
