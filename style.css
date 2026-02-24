@@ -1,11 +1,11 @@
 :root{
-  --bg: #f3f0ea;                 /* warm off-white */
-  --ink: #2d3136;                /* charcoal */
-  --muted: rgba(45,49,54,0.65);  /* for name + years */
-  --mid: rgba(45,49,54,0.84);    /* for section titles */
+  --bg: #f3f0ea;
+  --ink: #2d3136;
+  --muted: rgba(45,49,54,0.65);
+  --mid: rgba(45,49,54,0.84);
 
   --col-max: 680px;
-  --gutter: clamp(20px, 5vw, 64px);
+  --gutter: clamp(28px, 6vw, 90px);
 }
 
 *{ box-sizing: border-box; }
@@ -21,17 +21,19 @@ body{
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Page container */
+
 .wrap{
   width: min(var(--col-max), calc(100% - (2 * var(--gutter))));
   margin: 0 auto;
-  padding: clamp(78px, 12vh, 150px) 0 clamp(55px, 10vh, 120px);
+  padding: clamp(120px, 18vh, 220px) 0 clamp(70px, 12vh, 140px);
 }
 
 /* Masthead */
 
 .masthead{
   text-align: center;
-  margin-bottom: clamp(34px, 6vh, 56px);
+  margin-bottom: clamp(44px, 7vh, 70px);
 }
 
 .name{
@@ -39,7 +41,7 @@ body{
   font-size: clamp(16px, 1.9vw, 19px);
   letter-spacing: 0.01em;
   color: var(--muted);
-  margin-bottom: 20px; /* slightly more space to title */
+  margin-bottom: 42px;   /* deliberately generous separation */
 }
 
 /* Invisible hinge back to root */
@@ -62,11 +64,9 @@ body{
 .title{
   margin: 0;
   font-weight: 500;
-  font-size: clamp(40px, 6.2vw, 66px);
-  line-height: 1.08;
+  font-size: clamp(44px, 6.6vw, 72px);
+  line-height: 1.06;
   letter-spacing: 0.002em;
-  text-transform: none;
-  font-style: normal;
   color: var(--ink);
 }
 
@@ -74,28 +74,15 @@ body{
 
 .list{
   display: grid;
-  gap: 18px; /* slightly tighter between items */
-}
-
-.section-label{
-  font-style: italic;
-  font-weight: 400;
-  font-size: 15px;
-  letter-spacing: 0.04em; /* subtle tracking */
-  color: rgba(45,49,54,0.72);
-  margin-top: 18px;
-  margin-bottom: 2px;
-}
-
-.section-label:first-child{
-  margin-top: 0; /* no extra gap above first label */
+  gap: 16px;  /* slightly compressed */
+  position: relative;
 }
 
 .item{
   display: block;
   text-decoration: none;
   color: inherit;
-  padding: 2px 0; /* slightly tighter */
+  padding: 1px 0;
 }
 
 .item-title{
@@ -109,7 +96,28 @@ body{
   font-weight: 400;
   font-size: 15px;
   color: var(--muted);
-  margin-top: 3px; /* slightly tighter */
+  margin-top: 3px;
+}
+
+/* Section labels in left margin */
+
+.section-label{
+  font-style: italic;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  color: rgba(45,49,54,0.82);
+
+  /* Move into left white margin */
+  position: relative;
+  left: calc(-1 * (var(--gutter) * 0.9));
+
+  margin-top: 30px;
+  margin-bottom: 4px;
+}
+
+.section-label:first-child{
+  margin-top: 0;
 }
 
 /* Hover remains subtle */
