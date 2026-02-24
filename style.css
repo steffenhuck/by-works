@@ -27,9 +27,9 @@ body{
   width: min(var(--col-max), calc(100% - (2 * var(--gutter))));
   margin: 0 auto;
 
-  /* Dramatically increased top space */
+  /* generous, but not title-page monumental */
   padding:
-    clamp(320px, 45vh, 520px)
+    clamp(220px, 32vh, 360px)
     0
     clamp(110px, 16vh, 180px);
 }
@@ -47,9 +47,11 @@ body{
   letter-spacing: 0.01em;
   color: var(--muted);
 
-  /* Clearly perceptible separation */
-  margin-bottom: 72px;
+  /* perceptibly more space than before (≈ +50%) */
+  margin-bottom: clamp(110px, 10vh, 140px);
 }
+
+/* Invisible hinge back to root */
 
 .home-hinge{
   color: inherit;
@@ -79,7 +81,7 @@ body{
 
 .list{
   display: grid;
-  gap: 15px; /* slightly compressed */
+  gap: 15px;
   position: relative;
 }
 
@@ -104,20 +106,20 @@ body{
   margin-top: 3px;
 }
 
-/* Section labels living in the left margin */
+/* Section labels living in the left margin (lighter, whispering) */
 
 .section-label{
   font-style: italic;
-  font-weight: 500;
-  font-size: 15px;
-  letter-spacing: 0.05em;
-  color: rgba(45,49,54,0.82);
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: rgba(45,49,54,0.62);
 
-  /* Move fully into the white margin */
+  /* still in the margin, but more integrated */
   position: relative;
-  left: calc(-1 * var(--gutter));
+  left: calc(-1 * var(--gutter) * 0.6);
 
-  margin-top: 36px;
+  margin-top: 34px;
   margin-bottom: 6px;
 }
 
