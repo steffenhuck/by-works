@@ -27,11 +27,11 @@ body{
   width: min(var(--col-max), calc(100% - (2 * var(--gutter))));
   margin: 0 auto;
 
-  /* generous but controlled */
+  /* generous but natural */
   padding:
-    clamp(140px, 18vh, 220px)
+    clamp(120px, 16vh, 200px)
     0
-    clamp(100px, 14vh, 160px);
+    clamp(90px, 14vh, 150px);
 }
 
 /* Masthead */
@@ -42,13 +42,15 @@ body{
 }
 
 .name{
+  display: inline-block; /* CRUCIAL: enables vertical margin */
+
   font-weight: 400;
   font-size: clamp(16px, 1.9vw, 19px);
   letter-spacing: 0.01em;
   color: var(--muted);
 
-  /* clearly perceptible separation */
-  margin-bottom: 180px;
+  /* now this will actually work */
+  margin-bottom: 90px;
 }
 
 .home-hinge{
@@ -104,7 +106,7 @@ body{
   margin-top: 3px;
 }
 
-/* Section labels — light, whispering, slightly integrated */
+/* Section labels — light, whispering, integrated */
 
 .section-label{
   font-style: italic;
@@ -113,11 +115,10 @@ body{
   letter-spacing: 0.06em;
   color: rgba(45,49,54,0.60);
 
-  /* in margin but gently leaning toward content */
   position: relative;
-  left: calc(-1 * var(--gutter) * 0.58);
+  left: calc(-1 * var(--gutter) * 0.55);
 
-  margin-top: 32px;
+  margin-top: 28px;
   margin-bottom: 6px;
 }
 
