@@ -5,7 +5,7 @@
   --mid: rgba(45,49,54,0.84);
 
   --col-max: 680px;
-  --gutter: clamp(28px, 6vw, 90px);
+  --gutter: clamp(32px, 7vw, 120px);
 }
 
 *{ box-sizing: border-box; }
@@ -26,14 +26,19 @@ body{
 .wrap{
   width: min(var(--col-max), calc(100% - (2 * var(--gutter))));
   margin: 0 auto;
-  padding: clamp(120px, 18vh, 220px) 0 clamp(70px, 12vh, 140px);
+
+  /* Dramatically increased top space */
+  padding:
+    clamp(320px, 45vh, 520px)
+    0
+    clamp(110px, 16vh, 180px);
 }
 
 /* Masthead */
 
 .masthead{
   text-align: center;
-  margin-bottom: clamp(44px, 7vh, 70px);
+  margin-bottom: clamp(70px, 10vh, 120px);
 }
 
 .name{
@@ -41,10 +46,10 @@ body{
   font-size: clamp(16px, 1.9vw, 19px);
   letter-spacing: 0.01em;
   color: var(--muted);
-  margin-bottom: 42px;   /* deliberately generous separation */
-}
 
-/* Invisible hinge back to root */
+  /* Clearly perceptible separation */
+  margin-bottom: 72px;
+}
 
 .home-hinge{
   color: inherit;
@@ -64,8 +69,8 @@ body{
 .title{
   margin: 0;
   font-weight: 500;
-  font-size: clamp(44px, 6.6vw, 72px);
-  line-height: 1.06;
+  font-size: clamp(46px, 6.8vw, 74px);
+  line-height: 1.05;
   letter-spacing: 0.002em;
   color: var(--ink);
 }
@@ -74,7 +79,7 @@ body{
 
 .list{
   display: grid;
-  gap: 16px;  /* slightly compressed */
+  gap: 15px; /* slightly compressed */
   position: relative;
 }
 
@@ -99,7 +104,7 @@ body{
   margin-top: 3px;
 }
 
-/* Section labels in left margin */
+/* Section labels living in the left margin */
 
 .section-label{
   font-style: italic;
@@ -108,12 +113,12 @@ body{
   letter-spacing: 0.05em;
   color: rgba(45,49,54,0.82);
 
-  /* Move into left white margin */
+  /* Move fully into the white margin */
   position: relative;
-  left: calc(-1 * (var(--gutter) * 0.9));
+  left: calc(-1 * var(--gutter));
 
-  margin-top: 30px;
-  margin-bottom: 4px;
+  margin-top: 36px;
+  margin-bottom: 6px;
 }
 
 .section-label:first-child{
