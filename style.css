@@ -50,7 +50,7 @@ body{
   color: var(--muted);
 
   /* now this will actually work */
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .home-hinge{
