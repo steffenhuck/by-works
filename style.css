@@ -47,7 +47,7 @@ body{
   font-size: clamp(16px, 1.9vw, 19px);
   letter-spacing: 0.01em;
   color: var(--muted);
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .home-hinge{
