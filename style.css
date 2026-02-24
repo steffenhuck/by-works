@@ -26,6 +26,11 @@ body{
 .wrap{
   width: min(var(--col-max), calc(100% - (2 * var(--gutter))));
   margin: 0 auto;
+  padding:
+    clamp(90px, 12vh, 150px)
+    0
+    clamp(90px, 14vh, 150px);
+}
 
   /* generous but natural */
   padding:
