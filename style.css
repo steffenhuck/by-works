@@ -27,18 +27,18 @@ body{
   width: min(var(--col-max), calc(100% - (2 * var(--gutter))));
   margin: 0 auto;
 
-  /* generous, but not title-page monumental */
+  /* generous but controlled */
   padding:
-    clamp(220px, 32vh, 360px)
+    clamp(140px, 18vh, 220px)
     0
-    clamp(110px, 16vh, 180px);
+    clamp(100px, 14vh, 160px);
 }
 
 /* Masthead */
 
 .masthead{
   text-align: center;
-  margin-bottom: clamp(70px, 10vh, 120px);
+  margin-bottom: clamp(60px, 8vh, 100px);
 }
 
 .name{
@@ -47,11 +47,9 @@ body{
   letter-spacing: 0.01em;
   color: var(--muted);
 
-  /* perceptibly more space than before (≈ +50%) */
-  margin-bottom: clamp(110px, 10vh, 140px);
+  /* clearly perceptible separation */
+  margin-bottom: 120px;
 }
-
-/* Invisible hinge back to root */
 
 .home-hinge{
   color: inherit;
@@ -71,7 +69,7 @@ body{
 .title{
   margin: 0;
   font-weight: 500;
-  font-size: clamp(46px, 6.8vw, 74px);
+  font-size: clamp(46px, 6.6vw, 72px);
   line-height: 1.05;
   letter-spacing: 0.002em;
   color: var(--ink);
@@ -81,7 +79,7 @@ body{
 
 .list{
   display: grid;
-  gap: 15px;
+  gap: 14px;
   position: relative;
 }
 
@@ -106,20 +104,20 @@ body{
   margin-top: 3px;
 }
 
-/* Section labels living in the left margin (lighter, whispering) */
+/* Section labels — light, whispering, slightly integrated */
 
 .section-label{
   font-style: italic;
   font-weight: 400;
   font-size: 14px;
   letter-spacing: 0.06em;
-  color: rgba(45,49,54,0.62);
+  color: rgba(45,49,54,0.60);
 
-  /* still in the margin, but more integrated */
+  /* in margin but gently leaning toward content */
   position: relative;
-  left: calc(-1 * var(--gutter) * 0.6);
+  left: calc(-1 * var(--gutter) * 0.58);
 
-  margin-top: 34px;
+  margin-top: 32px;
   margin-bottom: 6px;
 }
 
